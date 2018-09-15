@@ -1,6 +1,6 @@
 package tr.app.data.ingest.src2raw.aws
 
-class IngestApp {
+class IngestTripsDataApp {
   
   def main(args: Array[String]) {
 

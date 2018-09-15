@@ -1,6 +1,6 @@
 package tr.app.data.ingest.src2raw.akka
 
-object IngestApp {
+object IngestTripsDataApp {
 
   def main(args: Array[String]) {
 
