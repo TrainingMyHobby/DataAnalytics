@@ -1,5 +1,7 @@
 package tr.app.data.services.ingest
 
+import tr.app.common.dto.ingest.IngestTripDataConfig
+
 
 trait TripDataIngestService {
 

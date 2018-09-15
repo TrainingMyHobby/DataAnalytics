@@ -1,6 +1,6 @@
 package tr.app.data.services.ingest.impl
 
-import tr.app.data.services.ingest._
+import tr.app.common.dto.ingest.IngestTripDataConfig
 
 class TripDataIngestServiceSparkImpl extends TripDataIngestService {
 
