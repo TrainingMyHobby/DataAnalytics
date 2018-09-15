@@ -13,6 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scala.binary.version>2.11</scala.binary.version>
+		<scala.version>2.11.11</scala.version>
 	</properties>
 
 	<dependencies>
@@ -27,14 +29,14 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.11.8</version>
+			<version>2.11.11</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.scala-lang/scalap -->
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scalap</artifactId>
-			<version>2.11.8</version>
+			<version>2.11.11</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
@@ -56,15 +58,23 @@
 			<version>2.2.0</version>
 			<scope>provided</scope>
 		</dependency>
-
-
-
-
 	</dependencies>
 	<modules>
-		<module>tr-app-utils</module>
 		<module>tr-app-common</module>
-		<module>tr-app-data-ingest</module>
+		<module>tr-app-utils</module>
 		<module>tr-app-data-services</module>
+		<module>tr-app-data-ingest</module>
 	</modules>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
