@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sat Sep 15 14:20:51 EDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0165-de76-c83c-00000f98dce8 
-on database directory /Users/vavkkishore/kishore/softwares/hadoop/research_projects/kishore/my-git-hub/tmh-github/DataAnalytics/projects/TaxiRides/taxirides-main/tr-app-data-ingest/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7f4037ed 
+Sat Sep 15 16:35:39 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0165-def2-332b-00000e9a70b8 
+on database directory /Users/vavkkishore/kishore/softwares/hadoop/research_projects/kishore/my-git-hub/tmh-github/DataAnalytics/projects/TaxiRides/taxirides-main/tr-app-data-ingest/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7ed9ae94 
 Loaded from file:/Users/vavkkishore/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_151-b12

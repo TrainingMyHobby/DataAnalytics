@@ -1,0 +1,17 @@
+{
+	"taxirides-app": {
+		"global-config": {
+			"spark-config": {
+				"spark-cluster-info": {
+				},
+				"spark-conf": {
+				},
+				"spark-conf-common": [
+					{
+						"spark.sql.warehouse.dir": "/tmp/target/sparkarehouse"
+					}
+				]
+			}
+		}
+	}
+}

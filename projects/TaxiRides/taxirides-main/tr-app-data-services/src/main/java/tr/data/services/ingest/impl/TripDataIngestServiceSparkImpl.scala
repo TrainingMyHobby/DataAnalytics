@@ -6,9 +6,9 @@ import tr.data.services.ingest.TripDataIngestService
 
 class TripDataIngestServiceSparkImpl extends TripDataIngestService {
 
-  def execute(a: IngestTripDataConfig): String = {
+  def execute(ingestConfig: IngestTripDataConfig): String = {
 
-    val sparkSession = SparkUtil.initializeSparkContext()
+    val sparkSession = SparkUtil.initializeSparkContext(ingestConfig)
 
     null
   }

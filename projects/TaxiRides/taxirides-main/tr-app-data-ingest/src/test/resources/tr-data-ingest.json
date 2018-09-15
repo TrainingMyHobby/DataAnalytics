@@ -1,0 +1,13 @@
+{
+	"taxirides-app": {
+		"tr-data-ingest": {
+			"application": {
+				"name": "Ingestion Application"
+			},
+			"spark-config": {
+				"spark-conf": {
+				}
+			}
+		}
+	}
+}

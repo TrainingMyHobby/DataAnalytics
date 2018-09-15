@@ -21,6 +21,12 @@
 			<artifactId>tr-app-data-services</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>tmh.da.projects</groupId>
+			<artifactId>tr-app-artifacts</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
