@@ -4,7 +4,7 @@ import tr.app.common.dto.ingest._
 
 trait TripDataIngestService {
 
-  def execute(ingestConf: IngestTripDataConfig): String
+  def execute(tripDataIngestConfig: IngestTripDataConfig): String
 
 }
 

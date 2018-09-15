@@ -12,8 +12,8 @@ object IngestObjectFactory {
 
   objects += TripDataIngestService.SERVICE_LOOKUP_NAME -> tripDataServiceEngineImpls
 
-  def getTripDataIngestService(lookupName: String, execEngine: String): TripDataIngestService = {
-    val execEnginesMap = objects get lookupName
+  def getTripDataIngestService(execEngine: String): TripDataIngestService = {
+    val execEnginesMap = objects get TripDataIngestService.SERVICE_LOOKUP_NAME
     val serviceImpl = execEnginesMap get execEngine
     serviceImpl.asInstanceOf[TripDataIngestService]
   }

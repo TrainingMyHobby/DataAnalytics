@@ -5,7 +5,9 @@ import tr.app.common.dto.ingest._
 
 class TripDataIngestServiceSparkImpl extends TripDataIngestService {
 
-  def execute(ingestConf: IngestTripDataConfig): String = {
+  def execute(tripDataIngestConfig: IngestTripDataConfig): String = {
+    
+    
 
     null
   }
