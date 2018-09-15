@@ -4,8 +4,29 @@
 			"application": {
 				"name": "Ingestion Application"
 			},
-			"spark-config": {
-				"spark-conf": {
+			"datanodes": {
+				"input-data-nodes": {
+					"no-of-data-nodes": "1"
+				},
+				"input-data-nodes-info": {
+					"input-data-node-1": {
+						"data-node-type": "s3",
+						"data-ingest-concurrency": 5,
+						"locations": [
+							"a",
+							"b",
+							"c",
+							"d",
+							"e",
+							"a",
+							"b",
+							"c",
+							"d",
+							"e"
+						]
+					}
+				},
+				"output-data-nodes": {
 				}
 			}
 		}

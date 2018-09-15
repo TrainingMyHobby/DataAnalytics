@@ -1,8 +1,9 @@
 package tr.data.services.ingest
 
 import tr.common.dto.ingest.IngestTripDataConfig
+import tr.common.service.AppService
 
-trait TripDataIngestService {
+trait TripDataIngestService extends AppService {
 
   def execute(a:IngestTripDataConfig): String
 

@@ -1,5 +1,5 @@
 package tr.common.service
 
-trait AppService {
-  
+trait AppService extends java.io.Serializable {
+
 }
