@@ -5,6 +5,8 @@ import tr.common.dto.ingest.IngestTripDataConfig
 import tr.common.util.spark.SparkUtil
 import tr.data.services.ingest.TripDataIngestService
 import org.apache.spark.rdd.RDD
+import java.nio.file.Paths
+import java.net.URI
 
 class TripDataIngestServiceSparkImpl extends TripDataIngestService with java.io.Serializable {
 
@@ -41,7 +43,15 @@ class TripDataIngestServiceSparkImpl extends TripDataIngestService with java.io.
 
   private def ingestATripDataFile(tripDataFileLocation: String) {
     println("tripDataFileLocation " + tripDataFileLocation)
+    var (year, month, filename) = extractYearAndMonthFromFileName(tripDataFileLocation)
+  }
 
+  private def extractYearAndMonthFromFileName(tripDataFileLocation: String): (String, String, String) = {
+
+    val filename = Paths.get(new URI(tripDataFileLocation).getPath()).getFileName().toString()
+    val yearAndMonthList = ("""\d+""".r findAllIn filename).toList
+
+    (yearAndMonthList(0).toString, yearAndMonthList(1).toString, filename)
   }
 
 }

@@ -2,7 +2,7 @@
 	"taxirides-app": {
 		"tr-data-ingest": {
 			"application": {
-				"name": "Ingestion Application"
+				"name": "Trips Data Ingestion Application (Historical)"
 			},
 			"datanodes": {
 				"input-data-nodes": {
@@ -11,44 +11,18 @@
 				"input-data-nodes-info": {
 					"input-data-node-1": {
 						"data-node-type": "s3",
+						"data-node-metadata-tables": {
+							"mongodb": "trips",
+							"dynamodb": "trips"
+						},
 						"data-ingest-concurrency": 5,
+						"data-ingest-begin-year": "2013",
+						"data-ingest-begin-month": "08",
+						"data-ingest-begin-day": "01",
+						"data-ingest-end-year": "2013",
+						"data-ingest-end-month": "08",
+						"data-ingest-end-day": "01",
 						"locations": [
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-01.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-02.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-03.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-04.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-05.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-06.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-07.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-08.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-09.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-10.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-11.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2015-12.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-01.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-02.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-03.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-04.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-05.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-06.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-07.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-08.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-09.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-10.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-11.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2016-12.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-01.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-02.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-03.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-04.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-05.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-06.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-07.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-08.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-09.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-10.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-11.csv",
-							"https://s3.amazonaws.com/nyc-tlc/trip+data/fhv_tripdata_2017-12.csv",
 							"https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2013-08.csv",
 							"https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2013-09.csv",
 							"https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2013-10.csv",
@@ -214,6 +188,13 @@
 					}
 				},
 				"output-data-nodes": {
+					"no-of-data-nodes": "1"
+				},
+				"output-data-nodes-info": {
+					"output-data-node-1": {
+						"data-node-type": "s3",
+						"data-node-base-location": "s3://"
+					}
 				}
 			}
 		}
